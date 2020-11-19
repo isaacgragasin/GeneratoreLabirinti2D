@@ -1,0 +1,44 @@
+* {
+    font-family: fantasy;
+}
+
+h1 {
+    font-size: 62px;
+}
+
+body {
+    background-color: royalblue;
+}
+
+.head {
+    background-color: firebrick;
+    text-align: center;
+}
+
+.params {
+    padding: 10px;
+    float: left;
+}
+
+.mazespace {
+    border: solid 2px;
+    background-color: white;
+    width: 850px;
+    height: 750px;
+}
+
+.width{
+    display: initial;
+}
+
+.height{
+    display: initial;
+}
+
+.size{
+    display: none;
+}
+
+#hexpaths{
+    display: none;
+}

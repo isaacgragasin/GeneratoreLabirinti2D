@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>2DMazeGenerator</title>
+    <meta charset="UTF-8"> 
+    <meta name="keywords" content="maze, js, html, generator">
+    <meta name="author" content="Isaac Gragasin">
+    <meta name="date" content="17.12.2020">
+    <meta name="description" content="Generatore di labirinti 2D">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="head">
+        <h1>2D Maze Generator</h1>
+    </div>
+    <div class="params">
+        <button onclick="showSolution()">Show Solution</button>
+        <button onclick="saveMaze()">Save Maze</button>
+        <br><br><br>
+        <label for="seed">Seed</label> <input type="text" id="seed" name="seed">
+        <br><br><br>
+        <button onclick="saveParam()">Save Parameters</button>
+        <button onclick="loadParam()">Load Parameters</button>
+        <br><br><br>
+        <label for="path">Paths</label> <input type="number" id="path" name="path" min="1" max=10 value="1">
+        <label for="loop">Loops</label> <input type="checkbox" id="loop" name="loop">
+
+        <br><br><br>
+        <div>
+            <label class="size" for="size">Size</label> <input type="number" id="size" class="size" name="size" min="4" max="50" value="4" >
+            <br><br>
+            <label class="width" for="width">Width</label> <input type="number" id="width" class="width" name="width" min="4" max="50" value="4">
+            <br><br>
+            <label class="height" for="height">Height</label> <input type="number" id="height" class="height" name="height" min="4" max="50" value="4">
+            <br><br>
+            <button onclick="generateMaze()">Generate Maze</button>
+            <br><br><br>
+        </div>
+        <div>
+            <div>
+            <h3>Maze Shape</h3>
+            <input type="radio" id="mrect" name="mshape" value="mrect" onchange="changeFields();" checked>
+            <label for="mrect">Rectangular</label><br>
+            <input type="radio" id="mcirc" name="mshape" value="mcirc" onchange="changeFields();">
+            <label for="mcirc">Circular</label><br>
+            <input type="radio" id="mtria" name="mshape" value="mtria" onchange="changeFields();">
+            <label for="mtria">Triangular</label><br>
+            <input type="radio" id="mhexa" name="mshape" value="mhexa" onchange="changeFields();">
+            <label for="mhexa">Hexagonal</label>
+            </div>
+
+            <div id="hexpaths">
+                <h4>Path Shape (for Hex-shaped Mazes)</h4>
+                <input type="radio" id="ptria" name="pshape" value="ptria" checked>
+                <label for="ptria">Triangular</label><br>
+                <input type="radio" id="phexa" name="pshape" value="phexa">
+                <label for="phexa">Hexagonal</label>
+            </div>
+        </div>
+    </div>
+    <canvas id="mazecanvas" class="mazespace">Browser doesn't support canvas.</canvas>
+    
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="algorithm.js"></script>
+    <script type="text/javascript" src="generator.js"></script>
+    <script type="text/javascript" src="impexp.js"></script>
+    <script type="text/javascript" src="interact.js"></script>
+</body>
+</html>
