@@ -1,5 +1,5 @@
 /**
- * Replacesa character at index in a string
+ * Replaces a character at index in a string
  * 
  * @param str the string to be modified
  * @param index the index where to change character
