@@ -14,7 +14,7 @@ function replaceAt(str, index, replacement) {
 }
 
 /**
- * 	Gets the number value at a specific index in a string (0 or 1)
+ * Gets the number value at a specific index in a string (0 or 1)
  * 
  * @param str the examined string
  * @param index the index of the character from which to get the number value
@@ -24,7 +24,7 @@ function stringVal(str, index) {
 }
 
 /**
- * 	Gets the int value of a javascript input.
+ * Gets the int value of a javascript input.
  * 
  * @param id the id of the input
  * @param defaultValue the default value to be returned in case the previous one is invalid
